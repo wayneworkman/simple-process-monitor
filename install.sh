@@ -7,7 +7,9 @@ fi
 
 
 cp simple-process-monitor.sh /simple-process-monitor.sh
-cp simple-process-monitor.service /etc/systemd/system/simple-process-monitor.service
+cp systemd.service /etc/systemd/system/simple-process-monitor.service
+mkdir -p /var/log/simple-process-monitor/
+cp logrotate.conf /etc/logrotate.d/simple-process-monitor.conf
 
 systemctl daemon-reload
 systemctl enable simple-process-monitor
