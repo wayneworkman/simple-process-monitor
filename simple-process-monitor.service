@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple Process Monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /simple-process-monitor.sh
+ExecStop=/bin/pkill simple-process-monitor.sh
+
+[Install]
+WantedBy=multi-user.target
