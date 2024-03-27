@@ -5,7 +5,7 @@
 
 ## Settings:
 top_n_processes=10
-log_file=/var/log/simple-process-monitor/simple-process-monitor.log # NOTE: This must align to the filename set in the logrotate configuration.
+log_file=/var/log/simple-process-monitor/simple-process-monitor.log # NOTE: this directory has a logrotate configuration.
 every_n_seconds=3
 
 

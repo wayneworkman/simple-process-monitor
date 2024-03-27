@@ -14,6 +14,17 @@ Run `install.sh` as root. This will do the following:
 * Enable a new service called `simple-process-monitor`
 * Start the new service called `simple-process-monitor`
 
+## Logs
+
+The log containing process information is located here: `/var/log/simple-process-monitor/simple-process-monitor.log`
+
+If the script outputs anything to StandardOutput, that will be located here: `/var/log/simple-process-monitor/StandardOutput.log`
+
+If the script outputs anything to StandardError, that will be located here `/var/log/simple-process-monitor/StandardError.log`
+
+A logrotate configuration is setup to rotate the files within  `/var/log/simple-process-monitor/` on a weekly basis, if the files reach 10M in size.
+
+
 ## Starting, Stopping, Enabling, Disabling, Status
 
 To enable on boot: `systemctl enable simple-process-monitor`
