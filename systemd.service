@@ -5,7 +5,7 @@ After=multi-user.target
 [Service]
 Type=simple
 Restart=always
-ExecStart=/usr/bash /simple-process-monitor.sh
+ExecStart=/bin/bash /simple-process-monitor.sh
 ExecStop=/bin/pkill simple-process-monitor.sh
 StandardOutput=append:/var/log/simple-process-monitor/StandardOutput.log
 StandardError=append:/var/log/simple-process-monitor/StandardError.log
