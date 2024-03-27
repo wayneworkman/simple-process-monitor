@@ -6,7 +6,7 @@
 ## Settings:
 top_n_processes=10
 log_file=/var/log/simple-process-monitor/simple-process-monitor.log # NOTE: this directory has a logrotate configuration.
-every_n_seconds=3
+every_n_seconds=15
 
 
 # Get absolute paths for the commands used.
