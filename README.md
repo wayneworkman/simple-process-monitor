@@ -31,6 +31,6 @@ Get Status: `systemctl status simple-process-monitor -l`
 
 ## Configuration
 
-All configuration exists within the bash script `simple-process-monitor.sh` towards the top of the script. The installed location is `/simple-process-monitor.py` so you would need to edit it there after installation. If you change the configuration when the utility is already running, you need to either restart the service or reboot.
+All configuration exists within the bash script `simple-process-monitor.sh` towards the top of the script. The installed location is `/simple-process-monitor.sh` so you would need to edit it there after installation. If you change the configuration when the utility is already running, you need to either restart the service or reboot.
 
 
