@@ -6,7 +6,7 @@ After=multi-user.target
 Type=simple
 Restart=always
 ExecStart=/bin/bash /simple-process-monitor.sh
-ExecStop=/bin/pkill -f /bin/bash /simple-process-monitor.sh
+ExecStop=/bin/pkill -f '/bin/bash /simple-process-monitor.sh'
 StandardOutput=append:/var/log/simple-process-monitor/StandardOutput.log
 StandardError=append:/var/log/simple-process-monitor/StandardError.log
 
