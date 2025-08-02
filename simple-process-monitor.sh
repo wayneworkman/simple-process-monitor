@@ -12,7 +12,6 @@ every_n_seconds=15
 # Get absolute paths for the commands used.
 date=$(command -v date)
 echo=$(command -v echo)
-cut=$(command -v cut)
 ps=$(command -v ps)
 head=$(command -v head)
 sleep=$(command -v sleep)
