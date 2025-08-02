@@ -1,6 +1,6 @@
 # Simple Process Monitor
 
-This is a very simple utility intended to help with troubleshooting performance problems. All it does is capture the top N CPU hungry processes on a linux system every N seconds, and outputs that information to a log file with timestamps.
+This is a very simple utility intended to help with troubleshooting performance problems. It captures system memory information and the top N CPU and memory hungry processes on a linux system every N seconds, and outputs that information to a log file with timestamps.
 
 ## Installation
 
@@ -23,6 +23,14 @@ If the script outputs anything to StandardOutput, that will be located here: `/v
 If the script outputs anything to StandardError, that will be located here `/var/log/simple-process-monitor/StandardError.log`
 
 A logrotate configuration is setup to rotate the files within  `/var/log/simple-process-monitor/` on a weekly basis, if the files reach 10M in size.
+
+## Output Format
+
+Each monitoring cycle outputs the following information:
+* Timestamp header
+* Free memory statistics (from `free -h` command)
+* Top N CPU consuming processes with %CPU, %MEM, and command
+* Top N memory consuming processes with %CPU, %MEM, and command
 
 
 ## Starting, Stopping, Enabling, Disabling, Status
