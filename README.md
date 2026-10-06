@@ -32,7 +32,9 @@ If the script outputs anything to StandardOutput, that will be located here: `/v
 
 If the script outputs anything to StandardError, that will be located here `/var/log/simple-process-monitor/StandardError.log`
 
-A logrotate configuration is setup to rotate the files within  `/var/log/simple-process-monitor/` on a weekly basis, if the files reach 10M in size.
+A logrotate configuration is setup to rotate the `*.log` files within `/var/log/simple-process-monitor/` on a weekly basis, if the files reach 10M in size.
+
+If you installed version 1.0.0, its logrotate configuration also matched already-rotated files and eventually caused logrotate to fail with "File name too long". To fix an existing install, copy the new `logrotate.conf` to `/etc/logrotate.d/simple-process-monitor.conf`, then delete the rotated files with very long names from `/var/log/simple-process-monitor/`.
 
 ## Output Format
 
